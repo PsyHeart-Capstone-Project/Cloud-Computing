@@ -1,1 +1,4 @@
 # PsyHeart Web Service
+
+## Architecture
+

@@ -117,6 +117,8 @@ The CC member is tasked with developing the API service, and deploying service a
 
 #### Individuals
 
-<a href="https://github.com/PsyHeart-Capstone-Project/Cloud-Computing/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PsyHeart-Capstone-Project/Cloud-Computing" />
-</a>
+<ul>
+    <li><strong>Aliyah Nisa Lathifah</strong> - C009D4KX1152 - <a href="[link_profile_github](https://github.com/aliyahnl)"></a></li>
+    <li><strong>Anisa Amalia Putri</strong> - C009D4KX0707 - <a href="[link_profile_github](https://github.com/ansmlptr)"></a></li>
+</ul>
+

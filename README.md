@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image/PsyHeart ERD.png" alt="PsyHeart Logo" height="180" />
+  <img src="image Logo/.png" alt="PsyHeart Logo" height="180" />
 </p>
 
 <h1 align="center">PsyHeart Web Service</h1>

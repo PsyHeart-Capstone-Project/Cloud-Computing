@@ -117,4 +117,6 @@ The CC member is tasked with developing the API service, and deploying service a
 
 #### Individuals
 
-<img src="https://contrib.rocks/image?repo=PsyHeart-Capstone-Project/Cloud-Computing" />
+<a href="https://github.com/PsyHeart-Capstone-Project/Cloud-Computing/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PsyHeart-Capstone-Project/Cloud-Computing" />
+</a>

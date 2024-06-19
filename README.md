@@ -6,7 +6,7 @@
 
 PsyHeart Web Service is a web service that allows you to listen to songs according to your mood. The songs here are classified based on genre and BPM, so you can find music that fits your current feelings. This service is under development and will be updated soon.
 
-> Base url of this service is: http://localhost:9000/
+> Base URL of this service is: http://localhost:9000/
 
 The service available:
 
@@ -44,19 +44,19 @@ The service available:
 
 # Authentications
 
-This service is using token for authentication. You should have an account to access this service. First if you don't have an account, create a new account. Then, create a token for authentication. It's like login, you need to authenticate yourself with email and password. If the autentication is valid, you will get a token. You can use this token to access the service. If dont, you will get a error message.
+This service uses tokens for authentication. You should have an account to access this service. First, create a new account if you don't have one. Then, the token for authentication will automatically saved. It's like login; you need to authenticate yourself with your email and password. If the authentication is valid, you will get a token. You can use this token to access the service. If you don't, you will get an error message.
 
 # Instructions
 
 ## Predictions Category Service
 
-The prediction service utilizes one of the Google Cloud Platform services, namely Cloud Functions, and model endpoints. The endpoint is used to predict the genre and category based on extracted features and BPM from a song. Cloud Functions is used to extract features and BPM from a song uploaded to the bucket.
+The prediction service utilizes one of the Google Cloud Platform services, Cloud Functions, and model endpoints. The endpoint predicts the genre and category based on features and BPM extracted from a song, and Cloud Functions extracts features and BPM from a song uploaded to the bucket.
 
-Cloud Functions will be triggered when a new song is uploaded to the bucket, then it sends a POST request with the extracted features and BPM values to be processed by the model, and receives a response from the model endpoint.
+Cloud Functions will be triggered when a new song is uploaded to the bucket, and then it sends a POST request with the extracted features and BPM values to be processed by the model. Then, it receives a response from the model endpoint.
 
 If the prediction is successful, you will get a JSON object containing the prediction result, which includes the highest probability and the predicted class.
 
-If the predicted class matches the desired one, the prediction results and song metadata will be stored in the songs database to be displayed in the application.
+If the predicted class matches the desired one, the prediction results and song metadata will be stored in the song database and displayed in the application.
 
 # Environment
 
@@ -107,13 +107,13 @@ This Web service uses Postman to test.
 
 - You can download the Postman documentation [here](https://documenter.getpostman.com/view/25236404/2sA3XTezv8).
 
-If you want to contribute to this project, please contact me.
+If you want to contribute to this project, please contact us.
 
 ## Contributors
 
 ### CC Member
 
-The CC member is tasked with developing the API service, and deploying service and the model. Essentially, in this project, CC handles backend operations and infrastructure.
+The CC member is tasked with developing the API service, deploying the service, and the model. Essentially, in this project, CC handles backend operations and infrastructure.
 
 #### Individuals
 

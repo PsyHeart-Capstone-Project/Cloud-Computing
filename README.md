@@ -75,7 +75,6 @@ DB_PORT = {your database port}
 # JWT Token Key
 ACCESS_TOKEN_KEY = {define your own token key}
 ACCESS_TOKEN_AGE = {define how long the access token is valid}
-REFRESH_TOKEN_KEY = 205b38b234566b208b35376fa1a764c7d6f3023d496cfa440fb7141ccec95b69
 
 # Model
 MODEL_URL = {define your own model url}

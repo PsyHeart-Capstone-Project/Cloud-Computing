@@ -118,8 +118,8 @@ The CC member is tasked with developing the API service, and deploying service a
 #### Individuals
 
 <ul>
-    <li><strong>Aliyah Nisa Lathifah</strong> - C009D4KX1152 - <a href="https://github.com/aliyahnl">profile</a></li>
-    <li><strong>Anisa Amalia Putri</strong> - C009D4KX0707 - <a href="https://github.com/ansmlptr">profile</a></li>
+    <li><strong>Aliyah Nisa Lathifah</strong> - C009D4KX1152 - <a href="https://github.com/aliyahnl">aliyahnl</a></li>
+    <li><strong>Anisa Amalia Putri</strong> - C009D4KX0707 - <a href="https://github.com/ansmlptr">ansmlptr</a></li>
 </ul>
 
 

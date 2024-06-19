@@ -1,0 +1,7 @@
+functions-framework==3.*
+librosa
+requests
+psycopg2-binary
+google-cloud-storage
+numpy<2.0
+pydub

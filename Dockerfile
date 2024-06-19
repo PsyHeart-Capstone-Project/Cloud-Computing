@@ -16,3 +16,5 @@ EXPOSE 9000
 
 # Run the web service on container startup.
 CMD ["npm", "run", "start"]
+
+ENV MODEL_URL = {define your own model url}

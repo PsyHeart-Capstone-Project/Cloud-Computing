@@ -11,8 +11,7 @@ const emailLowercase = Joi.string()
 // Password validation rules
 const passwordSchema = Joi.string()
   .min(6)
-  .pattern(/^[A-Z]/, "first letter uppercase")
-  .pattern(/[!@#\$%\^&\*\.]/, "one symbol")
+  .pattern(/[!@#$%^&*()_+\-=\[\]{}|:;"',<.>?]/, "one symbol")
   .required();
 
 const UserPayloadSchema = Joi.object({
@@ -22,11 +21,7 @@ const UserPayloadSchema = Joi.object({
 });
 
 const UpdateUserPayloadSchema = Joi.object({
-  email: Joi.string()
-    .email()
-    .custom((value) => {
-      return value.toLowerCase();
-    }),
+  email: emailLowercase.optional(),
   new_password: passwordSchema.optional(),
   name: Joi.string().optional(),
 });

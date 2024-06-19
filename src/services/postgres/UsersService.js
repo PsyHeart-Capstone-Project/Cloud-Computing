@@ -8,17 +8,13 @@ const AuthenticationError = require("../../exceptions/AuthenticationError");
 
 class UsersService {
   constructor() {
-    if (process.env.NODE_ENV === "development") {
-      this._pool = new Pool({
-        host: process.env.PGHOST,
-        database: process.env.PGDATABASE,
-        port: "5432",
-        user: process.env.PGUSER,
-        password: process.env.PGPASSWORD,
-      });
-    } else {
-      this._pool = new Pool();
-    }
+    this._pool = new Pool({
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+    });
   }
 
   async addUser({ email, password, name }) {

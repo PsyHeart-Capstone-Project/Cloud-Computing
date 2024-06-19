@@ -4,22 +4,18 @@ const InvariantError = require("../../exceptions/InvariantError");
 
 class RecommendationService {
   constructor() {
-    if (process.env.NODE_ENV === "development") {
-      this._pool = new Pool({
-        host: process.env.PGHOST,
-        database: process.env.PGDATABASE,
-        port: "5432",
-        user: process.env.PGUSER,
-        password: process.env.PGPASSWORD,
-      });
-    } else {
-      this._pool = new Pool();
-    }
+    this._pool = new Pool({
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+    });
   }
 
   async getSongByMood(mood) {
     const query = {
-      text: "SELECT s.id, s.name, s.duration, s.url, s.artist_name FROM songs s, categories c, questionnaire q WHERE q.mood = c.name AND c.name = s.category_name AND q.mood = $1 ORDER BY CASE WHEN s.id = 1 THEN 0 ELSE 1 END, s.id",
+      text: "SELECT DISTINCT s.id, s.name, s.duration, s.url, s.artist_name FROM songs s, categories c, questionnaire q WHERE q.mood = c.name AND c.name = s.category_name AND q.mood = $1",
       values: [mood],
     };
 
@@ -29,7 +25,11 @@ class RecommendationService {
       throw new InvariantError("Song Recomendation gagal di tampilkan");
     }
 
-    return result.rows;
+    const uniqueSongs = Array.from(
+      new Set(result.rows.map((song) => song.id))
+    ).map((id) => result.rows.find((song) => song.id === id));
+
+    return uniqueSongs;
   }
 }
 

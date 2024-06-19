@@ -79,6 +79,9 @@ ACCESS_TOKEN_AGE = {define how long the access token is valid}
 # Model
 MODEL_URL = {define your own model url}
 
+# Predict API Url
+PREDICT_API_URL= {your predict api url}
+
 ```
 
 Then you can use the following image to create your own database:

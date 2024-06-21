@@ -92,6 +92,7 @@ class UsersService {
   }
 
   async updateProfileUser({ id, email, new_password, name }) {
+    await this.verifyNewEmail(email);
     const existingUser = await this.getUserById(id);
 
     email = email || existingUser.email;
